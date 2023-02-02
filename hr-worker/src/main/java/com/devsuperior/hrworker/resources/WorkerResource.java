@@ -23,9 +23,6 @@ public class WorkerResource {
 	
 	private static Logger logger = org.slf4j.LoggerFactory.getLogger(WorkerResource.class);
 	
-	@Value("${test.config}")
-	private String testConfig;
-	
 	@Autowired
 	private Environment env;
 	@Autowired
@@ -46,7 +43,7 @@ public class WorkerResource {
 	
 	@GetMapping("/configs")
 	public ResponseEntity<Void> getConfigs() {
-		logger.info("Config: " + testConfig);
+		//logger.info("Config: " + testConfig);
 		return ResponseEntity.noContent().build();
 	}
 
